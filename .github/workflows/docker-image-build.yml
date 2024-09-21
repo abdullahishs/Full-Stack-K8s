@@ -27,7 +27,7 @@ jobs:
     - name: Build and Push image
       uses: docker/build-push-action@v6
       with:
-        context: ./docker/chelsea-goals-web
-        file: ./docker/chelsea-goals-web/Dockerfile
+        context: ./docker
+        file: ./docker/Dockerfile
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
