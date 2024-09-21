@@ -1,0 +1,125 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styling for the main title (h1) */
+h1 {
+    font-family: 'Arial', sans-serif; /* Use a sporty font */
+    font-size: 3rem; /* Larger size for emphasis */
+    font-weight: bold; /* Make it bold */
+    color: #003DA5; /* Chelsea blue */
+    text-align: center; /* Centered alignment */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+    margin: 20px 0; /* Space above and below */
+    letter-spacing: 2px; /* Spacing between letters */
+    text-transform: uppercase; /* Make text uppercase for impact */
+    background: linear-gradient(90deg, #003DA5, #0E4DA4); /* Gradient of Chelsea blue */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Fill color transparent for gradient */
+    padding: 10px; /* Padding around the text */
+    border-bottom: 3px solid #ffffff; /* Underline with white border */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+/* Add hover effect for h1 */
+h1:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+
+
+/* Video Gallery */
+.video-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.goal {
+    width: 30%;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.goal:hover {
+    transform: scale(1.05);
+}
+
+.goal-video {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Updated Description Box */
+.description-box {
+    margin-top: 40px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ef233c, #d90429);
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: left;
+    max-width: 500px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add a fancy border element */
+.description-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: skewX(-30deg);
+    transition: transform 0.5s ease;
+}
+
+.description-box:hover:before {
+    transform: skewX(-30deg) translateX(150%);
+}
+
+/* Updated Title */
+#goal-title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Updated Description */
+#goal-description {
+    margin-top: 10px;
+    color: #f9f9f9;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect for the Box */
+.description-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Optional Add an Icon or Decorative Element */
+.description-box:after {
+    content: '⚽'; /* You can replace with any symbol or decorative image */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 3rem;
+    opacity: 0.1;
+}
+
