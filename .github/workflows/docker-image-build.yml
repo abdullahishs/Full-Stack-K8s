@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: portfolio-website
+  IMAGE_NAME: fav-cfc-goals
 
 jobs:
   build:
@@ -27,6 +27,7 @@ jobs:
     - name: Build and Push image
       uses: docker/build-push-action@v6
       with:
-        context: ./chelsea-goals-web
+        context: ./docker/chelsea-goals-web
+        file: ./docker/chelsea-goals-web/Dockerfile
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
