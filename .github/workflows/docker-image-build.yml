@@ -13,6 +13,7 @@ jobs:
     name: Push Docker image to DockerHub
     runs-on: ubuntu-latest
     steps:
+
     - name: Checkout code
       uses: actions/checkout@v4
 
@@ -26,5 +27,6 @@ jobs:
     - name: Build and Push image
       uses: docker/build-push-action@v6
       with:
+        context: ./chelsea-goals-web
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
