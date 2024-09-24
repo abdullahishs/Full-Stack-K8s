@@ -81,3 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
 });
+
+function openArgoCD() {
+    window.open('https://argocd.abdullahishs.co.uk', '_blank');
+}
