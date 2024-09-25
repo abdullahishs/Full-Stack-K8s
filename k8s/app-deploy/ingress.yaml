@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: full-stack-k8s-ing
+  labels:
+    app: full-stack-k8s
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: letsencrypt-dns-cloudflare
+    external-dns.alpha.kubernetes.io/hostname: chelsea.abdullahishs.co.uk
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: chelsea.abdullahishs.co.uk
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: full-stack-k8s-svc 
+              port:
+                number: 80
+  tls:
+  - hosts:
+    - chelsea.abdullahishs.co.uk
+    secretName: full-stack-k8s-tls

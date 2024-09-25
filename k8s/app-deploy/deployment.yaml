@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: full-stack-k8s-app
+  labels:
+    app: full-stack-k8s
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: full-stack-k8s
+  template:
+    metadata:
+      labels:
+        app: full-stack-k8s
+    spec:
+      containers:
+      - name: full-stack-k8s-pod
+        image: abdullahi372/fav-cfc-goals:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80

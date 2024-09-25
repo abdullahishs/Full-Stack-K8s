@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: full-stack-k8s-argocd-cert
+  namespace: argocd
+spec:
+  secretName: full-stack-k8s-argocd-tls
+  dnsNames:
+  - argocd.abdullahishs.co.uk
+  issuerRef:
+    name: letsencrypt-dns-cloudflare
+    kind: ClusterIssuer

@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: full-stack-k8s-cert
+spec:
+  secretName: full-stack-k8s-tls
+  dnsNames:
+  - chelsea.abdullahishs.co.uk
+  issuerRef:
+    name: letsencrypt-dns-cloudflare
+    kind: ClusterIssuer
