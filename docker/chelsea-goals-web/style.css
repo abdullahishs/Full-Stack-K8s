@@ -115,7 +115,7 @@ h1:hover {
 
 /* Optional Add an Icon or Decorative Element */
 .description-box:after {
-    content: '⚽'; /* You can replace with any symbol or decorative image */
+    content: '⚽';
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -124,15 +124,15 @@ h1:hover {
 }
 
 .argocd-button {
-    background-image: url('images/argocd.png'); /* Path to your ArgoCD icon */
+    background-image: url('images/argocd.png');
     background-repeat: no-repeat;
-    background-size: 40px 40px; /* Adjust size to fit the button */
-    background-position: center left; /* Position the image on the left */
+    background-size: 40px 40px;
+    background-position: center left;
     color: white;
     border: none;
     padding: 10px 20px;
-    padding-left: 40px; /* Adjust padding to make space for the icon */
-    text-align: left; /* Align text to the left */
+    padding-left: 40px;
+    text-align: left;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
@@ -142,8 +142,8 @@ h1:hover {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #0088CC; /* Fallback color */
+    background-color: #0088CC;
 }
 .argocd-button:hover {
-    background-color: #005f99; /* Slightly transparent darker shade for hover effect */
+    background-color: #005f99;
 }

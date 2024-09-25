@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         goal.addEventListener('click', () => {
             video.currentTime = 0; // Start from the beginning
             video.play();
-            video.muted = false;   // Unmute when playing full video
+            video.muted = false;   // Unmute when playing full video 
         });
     });
     
